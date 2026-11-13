@@ -1,4 +1,47 @@
-* {
+#ranking {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #2b3b5c;
+}
+
+#ranking-button {
+  background: #f9ce69;
+  color: #241b05;
+}
+
+#ranking-duration {
+  max-width: 240px;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #2b3b5c;
+  overflow-wrap: anywhere;
+}
+
+th {
+  color: #65f4c4;
+}
+
+tbody tr:nth-child(odd) {
+  background: #0c1426;
+}
+
+#ranking-empty {
+  color: #bdcbe4;
+}* {
   box-sizing: border-box;
 }
 

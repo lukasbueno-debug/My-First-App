@@ -21,6 +21,12 @@
       </div>
 
       <div>
+        <label for="player-name">Nombre del jugador</label>
+        <input id="player-name" type="text"
+               maxlength="30" placeholder="Escribe tu nombre">
+      </div>
+
+      <div>
         <label for="duration">Duración</label>
         <select id="duration">
           <option value="10">10 segundos</option>
@@ -48,11 +54,42 @@
     <div class="controls">
       <button id="start-button" type="button">Iniciar partida</button>
       <button id="reset-button" type="button">Reiniciar</button>
+      <button id="ranking-button" type="button"
+              aria-expanded="false" aria-controls="ranking">
+        Ver ranking
+      </button>
     </div>
 
     <p id="message" role="status" aria-live="polite">
-      Selecciona la duración y pulsa Iniciar partida.
+      Escribe tu nombre, selecciona la duración e inicia la partida.
     </p>
+
+    <section id="ranking" hidden>
+      <h2>Tabla de récords</h2>
+      <p>Los récords se guardan en este navegador.</p>
+
+      <label for="ranking-duration">Categoría</label>
+      <select id="ranking-duration">
+        <option value="10">10 segundos</option>
+        <option value="20">20 segundos</option>
+        <option value="30">30 segundos</option>
+      </select>
+
+      <p id="ranking-empty">Todavía no hay récords en esta categoría.</p>
+
+      <div class="table-container">
+        <table id="ranking-table" hidden>
+          <thead>
+            <tr>
+              <th scope="col">Posición</th>
+              <th scope="col">Jugador</th>
+              <th scope="col">Clics</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 </body>
 </html>
