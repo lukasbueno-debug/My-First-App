@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de clics | Colegio Bolívar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="actions.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="school">COLEGIO BOLÍVAR</p>
+    <h1 id="title">Reto de clics</h1>
+    <p>Consigue la mayor cantidad de clics antes de que termine el tiempo.</p>
+
+    <div class="settings">
+      <div>
+        <label for="title-input">Título del juego</label>
+        <input id="title-input" type="text"
+               maxlength="60" placeholder="Reto de clics">
+      </div>
+
+      <div>
+        <label for="duration">Duración</label>
+        <select id="duration">
+          <option value="10">10 segundos</option>
+          <option value="20">20 segundos</option>
+          <option value="30">30 segundos</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div>
+        <span>Tiempo transcurrido</span>
+        <strong><span id="timer">0.000</span> s</strong>
+      </div>
+      <div>
+        <span>Clics</span>
+        <strong id="count">0</strong>
+      </div>
+    </div>
+
+    <button id="click-button" type="button" disabled>
+      ¡HAZ CLIC AQUÍ!
+    </button>
+
+    <div class="controls">
+      <button id="start-button" type="button">Iniciar partida</button>
+      <button id="reset-button" type="button">Reiniciar</button>
+    </div>
+
+    <p id="message" role="status" aria-live="polite">
+      Selecciona la duración y pulsa Iniciar partida.
+    </p>
+  </main>
+</body>
+</html>
